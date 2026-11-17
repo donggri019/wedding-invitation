@@ -74,8 +74,48 @@
         <p><b>지하철</b><span>1·2호선 신도림역 3번 출구 방면에서 테크노마트 판매동 지하 1층으로 연결됩니다.</span></p>
       </div>
     </section>
+    <section id="rsvp" class="responses" aria-labelledby="rsvp-title">
+      <p class="kicker" lang="en">RSVP</p>
+      <h2 id="rsvp-title">참석 여부</h2>
+      <p class="intro">귀한 걸음에 맞춰 자리를 준비할 수 있도록<br>참석 여부를 알려주세요.</p>
+      <details class="form-panel"><summary>참석 여부 전달하기</summary>
+        <form id="rsvp-form" method="post">
+          <fieldset disabled>
+            <label>성함<input name="name" autocomplete="name" maxlength="40" required></label>
+            <div class="form-row">
+              <label>어느 쪽 하객이신가요?<select name="side" required><option value="">선택해 주세요</option><option>신랑측</option><option>신부측</option></select></label>
+              <label>참석 여부<select name="attendance" required><option value="">선택해 주세요</option><option>참석</option><option>불참</option></select></label>
+            </div>
+            <label id="count-field" hidden>본인 포함 참석 인원<input type="number" name="count" inputmode="numeric" min="1" max="30" step="1" value="1" disabled></label>
+            <p class="fine">참석 응답은 신랑·신부에게만 전달됩니다.</p>
+            <button type="submit">응답 보내기</button>
+          </fieldset>
+          <p class="form-status" role="status">현재 참석 응답 접수를 준비하고 있어요.</p>
+        </form>
+      </details>
+    </section>
+    <section id="guestbook" class="responses" aria-labelledby="guestbook-title">
+      <p class="kicker" lang="en">Guest book</p>
+      <h2 id="guestbook-title">방명록</h2>
+      <p class="intro">저희 두 사람에게 한마디 남겨주세요.<br>오래도록 소중히 간직하겠습니다.</p>
+      <ul id="notes" aria-label="공개 축하 글"></ul>
+      <p id="notes-status" class="fine" role="status"></p>
+      <details class="form-panel"><summary>축하 글 남기기</summary>
+        <form id="note-form" method="post">
+          <fieldset disabled>
+            <label>이름 또는 별명<input name="name" maxlength="40" required></label>
+            <label>축하 글 <span class="limit">(400자까지)</span><textarea name="message" rows="4" maxlength="400" required></textarea></label>
+            <label class="opt-in"><input type="checkbox" name="visible" value="yes">이름과 글을 청첩장에 공개할게요</label>
+            <p class="fine">선택하지 않으면 신랑·신부만 읽을 수 있어요.</p>
+            <button type="submit">축하 글 보내기</button>
+          </fieldset>
+          <p class="form-status" role="status">현재 방명록 접수를 준비하고 있어요.</p>
+        </form>
+      </details>
+    </section>
     <footer><span lang="en">Donggyun <i>&amp;</i> Sungjin</span><span>2027. 11. 07</span></footer>
   </main>
   <script src="./gallery.js" defer></script>
+  <script src="./responses.js" defer></script>
 </body>
 </html>
