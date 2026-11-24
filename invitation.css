@@ -62,6 +62,10 @@ footer span:last-child { font-size:12px; letter-spacing:.12em; }
 #gallery-controls span { font:12px var(--roman); letter-spacing:.12em; }
 .info { background:#f3f1e9; }
 .info h2 { margin-bottom:22px; }
+.info-item { text-align:left; border-top:1px solid var(--line); }
+.info-item:last-child { border-bottom:1px solid var(--line); }
+.info-item h3 { margin:0; padding:15px 0; font-size:15px; font-weight:400; }
+.info-item p { padding:0 0 16px; font:14px/1.8 system-ui,sans-serif; }
 details { text-align:left; border-top:1px solid var(--line); }
 details:last-of-type { border-bottom:1px solid var(--line); }
 summary { padding:15px 0; font-size:15px; cursor:pointer; }
